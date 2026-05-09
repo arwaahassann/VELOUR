@@ -148,8 +148,8 @@ if (paymentMethod === "credit_card") {
     mode: "payment",
     discounts: stripeDiscounts,
     metadata: {
-        userId: userId || null,
-       guestId: userId ? null : guestId,
+      userId: userId || null,
+      guestId: userId ? null : guestId,
       address: JSON.stringify(address),
       items: JSON.stringify(orderItems),
       discount: discount.toString(),
@@ -164,11 +164,10 @@ if (paymentMethod === "credit_card") {
       },
       quantity: item.quantity,
     })),
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/cancel",
+    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
+    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancel`,
   });
 
-  // ✅ مهم جدًا
   return Response.json({ url: sessionStripe.url });
 }
   } catch (error) {

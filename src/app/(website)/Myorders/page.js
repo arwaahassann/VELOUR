@@ -1,15 +1,13 @@
 import Historyorder from "../../componets/myorders/Historyorder";
-import { getMyOrders }  from "../../Context/Ordersever";
+import { getMyOrders } from "../../Context/Ordersever";
 
 export default async function Myorder() {
+  const orders = (await getMyOrders()) || [];
+  const plainOrders = JSON.parse(JSON.stringify(orders));
 
-    const orders = await getMyOrders() || [];
-    console.log(orders)
-  
-    return (
-        <div>
-<Historyorder orders={orders}/>
-        </div>
-    )
-    
+  return (
+    <div>
+      <Historyorder orders={plainOrders} />
+    </div>
+  );
 }
