@@ -1,0 +1,37 @@
+.success-page {
+  background: #0e0c0a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+.success-page h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 300;
+  font-style: italic;
+  color: #f0ebe3;
+}
+
+.success-page p { color: #8a7d6e; font-size: 14px; font-family: 'DM Sans', sans-serif; }
+
+.success-page a {
+  margin-top: 10px;
+  padding: 14px 40px;
+  background: #c9a96e;
+  color: #0e0c0a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  display: inline-block;
+}
+.success-page a:hover { background: #dbbf84; }
+
+.success-icon { font-size: 48px; color: #c9a96e; }

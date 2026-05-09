@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  background: #c9a96e;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999;
+}
+
+header .container {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .emailus a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #0e0c0a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+header .emailus a:hover { opacity: 0.7; }
+
+header .sociallinks {
+  display: flex;
+  gap: 14px;
+}
+header .sociallinks a {
+  color: #0e0c0a;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+header .sociallinks a:hover { opacity: 0.6; }

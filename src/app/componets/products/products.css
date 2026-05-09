@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap');
+
+.products {
+  padding: 80px 0;
+  background: #0e0c0a;
+}
+
+.products .container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.products .container .filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 0;
+  border-bottom: 1px solid #2a241e;
+}
+
+.products .container .filters p {
+  flex: 1;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #4a4035;
+  padding: 16px 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.products .container .filters p:hover { color: #8a7d6e; }
+
+.products .container .filters p.active {
+  color: #c9a96e;
+  border-bottom: 2px solid #c9a96e;
+}
+
+.products .container .filters::before,
+.products .container .filters::after { display: none; }
+
+.products .container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: flex-start;
+  padding: 40px 0;
+  background: #2a241e;
+}
+
+/* CARD */
+.products .container .cards .item {
+  width: calc(33.333% - 1px);
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #0e0c0a;
+  overflow: hidden;
+  transition: background 0.3s;
+  padding-bottom: 20px;
+}
+
+.products .container .cards .item:hover { background: #161310; }
+
+/* IMAGE */
+.products .container .cards .item .image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.products .container .cards .item .image .icon-wishlist {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 20px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2;
+}
+
+.products .container .cards .item .image .icon-wishlist:hover { color: rgba(255,255,255,0.9); }
+
+.products .container .cards .item .image > div {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.products .container .cards .item:hover .image > div {
+  transform: scale(1.04);
+}
+
+.products .container .cards .item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 18px 16px 4px;
+  text-transform: capitalize;
+  cursor: default;
+  color: #f0ebe3;
+  letter-spacing: 0.5px;
+}
+
+.products .container .cards .item p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #4a4035;
+  padding: 0 16px;
+  line-height: 1.6;
+  cursor: default;
+  letter-spacing: 0.3px;
+}
+
+.products .container .cards .item .action {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 0;
+}
+
+.products .container .cards .item span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #c9a96e;
+  cursor: default;
+  letter-spacing: 0.5px;
+}
+
+.Add-to-card {
+  background: transparent;
+  color: #c9a96e;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 300;
+  border: 1px solid #2a241e;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.Add-to-card:hover {
+  background: #c9a96e;
+  color: #0e0c0a;
+  border-color: #c9a96e;
+}
+
+.Add-to-card:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+span.outofstock {
+  text-transform: uppercase;
+  font-size: 10px !important;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #4a4035 !important;
+  border: 1px solid #2a241e;
+  padding: 7px 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.error {
+  font-size: 11px !important;
+  color: #c0392b !important;
+  padding: 0 16px !important;
+  letter-spacing: 0.5px;
+}
+
+@media(max-width:780px) {
+  .products .container { width: 98%; }
+  .products .container .cards { gap: 1px; }
+  .products .container .cards .item { width: calc(50% - 1px); min-height: 380px; }
+  .products .container .cards .item .image { height: 220px; }
+  .products .container .cards .item .action { flex-wrap: wrap; gap: 8px; }
+}
+
+@media(max-width:480px) {
+  .products .container .cards .item { width: 100%; }
+}

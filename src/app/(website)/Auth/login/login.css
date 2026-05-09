@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+.auth-signup {
+  margin: 10rem auto;
+  display: flex;
+  width: 65%;
+  background: #161310;
+  border: 1px solid #2a241e;
+  height: 620px;
+}
+
+.auth-signup .image {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+.auth-wrapper { flex: 1; }
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px 40px;
+  height: 100%;
+  justify-content: center;
+}
+
+.auth-container .text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: #f0ebe3;
+  padding: 0 0 10px 0;
+  text-align: left;
+}
+
+.auth-container .text p {
+  color: #4a4035;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form input {
+  background: #0e0c0a;
+  border: 1px solid #2a241e;
+  border-radius: 0;
+  padding: 13px 16px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: #f0ebe3;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.auth-form input::placeholder { color: #4a4035; letter-spacing: 0.5px; }
+.auth-form input:focus { border-color: #c9a96e; }
+
+.auth-form button {
+  padding: 14px;
+  background: #c9a96e;
+  color: #0e0c0a;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form button:hover { background: #dbbf84; }
+
+.google-button {
+  background: transparent !important;
+  border: 1px solid #2a241e !important;
+  color: #8a7d6e !important;
+}
+.google-button:hover { border-color: #c9a96e !important; color: #c9a96e !important; }
+
+.options {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #4a4035;
+  text-align: center;
+}
+.options a { color: #c9a96e; transition: opacity 0.2s; }
+.options a:hover { opacity: 0.7; }
+
+.loader {
+  width: 14px; height: 14px;
+  border: 2px solid rgba(14,12,10,0.3);
+  border-top-color: #0e0c0a;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media(max-width: 800px) {
+  .auth-signup { width: 95%; flex-direction: column; height: auto; }
+  .auth-signup .image { height: 220px; }
+  .auth-container { padding: 24px 20px; }
+}
